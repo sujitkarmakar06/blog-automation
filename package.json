@@ -1,0 +1,27 @@
+{
+  "name": "blog-automation-platform",
+  "version": "2.0.0",
+  "description": "Multi-tenant blog automation platform: accounts, SEO optimization, Claude-powered drafting, scheduling, and auto-publishing to WordPress (encrypted credentials).",
+  "main": "src/server.js",
+  "type": "commonjs",
+  "scripts": {
+    "start": "node src/server.js",
+    "seed": "node src/seed.js"
+  },
+  "keywords": [
+    "blog",
+    "automation",
+    "seo",
+    "wordpress",
+    "cms",
+    "scheduler"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "bcryptjs": "^3.0.3",
+    "better-sqlite3": "^11.10.0",
+    "cookie-parser": "^1.4.7",
+    "express": "^4.22.2",
+    "jsonwebtoken": "^9.0.3"
+  }
+}
