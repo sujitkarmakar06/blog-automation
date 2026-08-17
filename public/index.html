@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Blog Automation — Dashboard</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <span class="logo">◧</span>
+      <div>
+        <h1>Blog Automation</h1>
+        <p class="tag">Multi-project · SEO · Scheduling · Auto-publish</p>
+      </div>
+    </div>
+    <nav class="nav">
+      <button class="nav-btn active" data-view="projects">Projects</button>
+      <button class="nav-btn" data-view="queue">Publish Queue</button>
+      <div class="user-area" id="user-area"></div>
+    </nav>
+  </header>
+
+  <!-- AUTH SCREEN -->
+  <section id="auth-screen" class="auth-screen hidden">
+    <div class="auth-card">
+      <div class="brand" style="margin-bottom:18px">
+        <span class="logo">◧</span>
+        <div><h1 style="font-size:18px">Blog Automation</h1><p class="tag">Sign in to your workspace</p></div>
+      </div>
+      <div id="auth-tabs" class="auth-tabs">
+        <button class="auth-tab active" data-mode="login">Log in</button>
+        <button class="auth-tab" data-mode="signup">Sign up</button>
+      </div>
+      <label>Email</label>
+      <input id="auth-email" type="email" placeholder="you@company.com" />
+      <label>Password</label>
+      <input id="auth-password" type="password" placeholder="••••••••" />
+      <p class="hint" id="auth-hint">Use the demo account: <strong>demo@local</strong> / <strong>demo1234</strong></p>
+      <button class="btn" id="auth-submit" style="width:100%;margin-top:12px">Log in</button>
+      <p class="auth-error" id="auth-error"></p>
+    </div>
+  </section>
+
+  <main id="app">
+    <!-- PROJECTS VIEW -->
+    <section id="view-projects" class="view">
+      <div class="sidebar">
+        <div class="sidebar-head">
+          <h2>Projects</h2>
+          <button class="btn small" id="btn-new-project">+ New</button>
+        </div>
+        <ul id="project-list" class="project-list"></ul>
+      </div>
+
+      <div class="content" id="project-content">
+        <div class="empty" id="project-empty">
+          <p>Select a project, or create one to get started.</p>
+        </div>
+        <div id="project-detail" class="hidden"></div>
+      </div>
+    </section>
+
+    <!-- QUEUE VIEW -->
+    <section id="view-queue" class="view hidden">
+      <div class="queue-wrap" id="queue-wrap"></div>
+    </section>
+  </main>
+
+  <!-- Modal host -->
+  <div id="modal-root"></div>
+
+  <script src="app.js"></script>
+</body>
+</html>
